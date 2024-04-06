@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav .logohead {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+nav .logohead h1 a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #6c7a89;
+}
+@media (max-width: 950px) {
+  nav .logohead {
+    display: none;
+  }
+}
+nav div.nav-menus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+nav div.nav-menus .logohead {
+  z-index: 0;
+  display: flex;
+  justify-content: start;
+  padding: 0;
+  font-size: 12px;
+  width: 100%;
+}
+nav div.nav-menus .logohead a {
+  text-align: left;
+}
+@media (min-width: 950px) {
+  nav div.nav-menus .logohead {
+    display: none;
+  }
+}
+nav div.nav-menus .menu-side ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav div.nav-menus .menu-side ul li a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #6c7a89;
+  font-weight: 300;
+  font-size: 14px;
+}
+@media (max-width: 950px) {
+  nav div.nav-menus .menu-side {
+    display: none;
+  }
+}
+nav div.nav-menus div.search-button-side {
+  position: absolute;
+  background-color: white;
+  right: 32px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav div.nav-menus div.search-button-side .search {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+nav div.nav-menus div.search-button-side .search .search-input {
+  position: relative;
+  padding: 10px;
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #EDF3FB;
+  border-radius: 2px;
+  outline: none;
+  z-index: 0;
+}
+nav div.nav-menus div.search-button-side .search .search-input:focus {
+  box-shadow: 0px 0px 1px 2px #e44b43;
+}
+nav div.nav-menus div.search-button-side .search .search-input::placeholder {
+  opacity: 0.6;
+}
+@media (max-width: 950px) {
+  nav div.nav-menus div.search-button-side .search .search-input {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+  }
+}
+nav div.nav-menus div.search-button-side .button a.login {
+  padding: 10px;
+  display: block;
+  background-color: #e44b43;
+  width: 100px;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+@media (max-width: 950px) {
+  nav div.nav-menus div.search-button-side .button a.login {
+    width: 70px;
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+@media (max-width: 550px) {
+  nav div.nav-menus div.search-button-side {
+    right: 20px;
+  }
+}
+@media (max-width: 550px) {
+  nav div.nav-menus {
+    padding: 2rem 1rem;
+  }
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+main section.hero-section {
+  position: relative;
+}
+main section.hero-section div.hero-content {
+  display: flex;
+  flex: 1;
+  gap: 100px;
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+}
+main section.hero-section div.hero-content div.text-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100vh;
+}
+main section.hero-section div.hero-content div.text-content p.sub-heading {
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+main section.hero-section div.hero-content div.text-content h1.heading {
+  color: black;
+  font-size: 300%;
+  font-weight: 900;
+}
+main section.hero-section div.hero-content div.text-content p.description {
+  line-height: 1.7;
+}
+main section.hero-section div.hero-content div.text-content a.read-articles {
+  color: #fff;
+  background-color: #036CDB;
+  padding: 10px;
+  width: 170px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+main section.hero-section div.hero-content div.text-content img.dotted-pattern {
+  width: 350px;
+  height: 200px;
+  object-fit: contain;
+  margin-top: auto;
+}
+@media (max-width: 950px) {
+  main section.hero-section div.hero-content div.text-content img.dotted-pattern {
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: auto;
+  }
+}
+main section.hero-section div.hero-content div.image-content {
+  width: 100%;
+  min-height: 100vh;
+}
+main section.hero-section div.hero-content div.image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media (max-width: 950px) {
+  main section.hero-section div.hero-content div.image-content {
+    min-height: 100%;
+  }
+}
+@media (max-width: 950px) {
+  main section.hero-section div.hero-content {
+    width: 100%;
+    padding: 50px 50px 0px 50px;
+    display: block;
+    gap: 20px;
+  }
+}
+@media (max-width: 550px) {
+  main section.hero-section div.hero-content {
+    width: 100%;
+    padding: 50px 20px 0px 20px;
+    display: block;
+    gap: 20px;
+  }
+  main section.hero-section div.hero-content div.text-content p.sub-heading {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  main section.hero-section div.hero-content div.text-content h1.heading {
+    color: black;
+    font-size: 200%;
+    font-weight: 900;
+  }
+  main section.hero-section div.hero-content div.text-content p.description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+main section.hero-section div.empty-element {
+  position: absolute;
+  z-index: -1;
+  background-color: #EDF3FB;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+main section.newsletter {
+  min-height: 350px;
+  padding: 2rem 0;
+  background-color: #EDF3FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.newsletter div.newsletter-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 40px;
+  background-color: #fff;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+main section.newsletter div.newsletter-content div.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+main section.newsletter div.newsletter-content div.text-content p {
+  font-size: 14px;
+  color: #666e93;
+}
+main section.newsletter div.newsletter-content div.form-content {
+  display: flex;
+  align-items: center;
+}
+main section.newsletter div.newsletter-content div.form-content form {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  width: 100%;
+  gap: 10px;
+}
+main section.newsletter div.newsletter-content div.form-content form input.email {
+  width: 100%;
+  border: 1.5px solid #EDF3FB;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+main section.newsletter div.newsletter-content div.form-content form input.email::placeholder {
+  font-weight: 600;
+  color: #666e93;
+}
+main section.newsletter div.newsletter-content div.form-content form input.email:focus {
+  box-shadow: 0px 0px 1px 2px #036CDB;
+}
+main section.newsletter div.newsletter-content div.form-content form button.subscribe-btn {
+  background-color: #036CDB;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+@media (max-width: 550px) {
+  main section.newsletter div.newsletter-content div.form-content form {
+    grid-template-columns: 1fr;
+  }
+  main section.newsletter div.newsletter-content div.form-content form input.email {
+    width: 100%;
+    border: 1.5px solid #EDF3FB;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  main section.newsletter div.newsletter-content div.form-content form input.email::placeholder {
+    font-weight: 600;
+    color: #666e93;
+  }
+  main section.newsletter div.newsletter-content div.form-content form input.email:focus {
+    box-shadow: 0px 0px 1px 2px #036CDB;
+  }
+}
+@media (max-width: 950px) {
+  main section.newsletter div.newsletter-content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+  }
+  main section.newsletter div.newsletter-content div.text-content {
+    text-align: center;
+  }
+  main section.newsletter div.newsletter-content div.text-content p {
+    font-size: 14px;
+    color: #666e93;
+  }
+}
+main section.short-add div.img {
+  height: 300px;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.short-add div.img img {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+@media (max-width: 720px) {
+  main section.short-add div.img {
+    height: 200px;
+  }
+}
+main section.popular-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding: 50px 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+main section.popular-categories h2 {
+  color: black;
+  font-size: 250%;
+}
+@media (max-width: 950px) {
+  main section.popular-categories h2 {
+    font-size: 150%;
+  }
+}
+main section.popular-categories div.categories {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+main section.popular-categories div.categories div.category {
+  position: relative;
+  border-radius: 20px;
+  height: 300px;
+}
+main section.popular-categories div.categories div.category img {
+  width: 100%;
+  border-radius: 20px;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+main section.popular-categories div.categories div.category a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+@media (max-width: 950px) {
+  main section.popular-categories div.categories {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  main section.popular-categories div.categories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+main section.popular-categories a.explore-them-all {
+  background-color: #036CDB;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 12px 30px;
+  color: #fff;
+  transition: all 200ms ease-in;
+  border-radius: 5px;
+}
+main section.popular-categories a.explore-them-all:hover {
+  background-color: black;
+}
+main section.creative-dev-podcasts {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin-top: 50px;
+  margin: 20px;
+}
+main section.creative-dev-podcasts h2 {
+  font-size: 28px;
+}
+@media (max-width: 550px) {
+  main section.creative-dev-podcasts h2 {
+    font-size: 20px;
+  }
+}
+main section.creative-dev-podcasts div.podcasts {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-bottom: 64px;
+  gap: 20px;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  border-radius: 10px;
+  background-color: #EDF3FB;
+  padding: 20px;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast h3 {
+  text-wrap: wrap;
+  width: 70px;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast h3 a {
+  text-decoration: none;
+  color: #036CDB;
+  font-size: 18px;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast span {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 13px;
+  margin-top: 20px;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast p {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast a.play {
+  width: 40px;
+  height: 40px;
+  background-color: #036CDB;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast a.play img {
+  width: 40%;
+  height: 40%;
+  position: relative;
+}
+main section.creative-dev-podcasts div.podcasts div.podcast img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 10px;
+  z-index: 0;
+}
+main section.creative-dev-podcasts div.podcasts .tall-add {
+  height: 100%;
+}
+main section.creative-dev-podcasts div.podcasts .tall-add img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 950px) {
+  main section.creative-dev-podcasts div.podcasts {
+    width: 100%;
+  }
+}
+@media (max-width: 950px) {
+  main ection.creative-dev-podcasts {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

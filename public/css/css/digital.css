@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav .logohead {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+nav .logohead h1 a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #6c7a89;
+}
+@media (max-width: 950px) {
+  nav .logohead {
+    display: none;
+  }
+}
+nav div.nav-menus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+nav div.nav-menus .logohead {
+  z-index: 0;
+  display: flex;
+  justify-content: start;
+  padding: 0;
+  font-size: 12px;
+  width: 100%;
+}
+nav div.nav-menus .logohead a {
+  text-align: left;
+}
+@media (min-width: 950px) {
+  nav div.nav-menus .logohead {
+    display: none;
+  }
+}
+nav div.nav-menus .menu-side ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav div.nav-menus .menu-side ul li a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #6c7a89;
+  font-weight: 300;
+  font-size: 14px;
+}
+@media (max-width: 950px) {
+  nav div.nav-menus .menu-side {
+    display: none;
+  }
+}
+nav div.nav-menus div.search-button-side {
+  position: absolute;
+  background-color: white;
+  right: 32px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav div.nav-menus div.search-button-side .search {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+nav div.nav-menus div.search-button-side .search .search-input {
+  position: relative;
+  padding: 10px;
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  outline: none;
+  z-index: 0;
+}
+nav div.nav-menus div.search-button-side .search .search-input::placeholder {
+  opacity: 0.6;
+}
+@media (max-width: 950px) {
+  nav div.nav-menus div.search-button-side .search .search-input {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+  }
+}
+nav div.nav-menus div.search-button-side .button a.login {
+  padding: 10px;
+  display: block;
+  background-color: #e44b43;
+  width: 100px;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+@media (max-width: 950px) {
+  nav div.nav-menus div.search-button-side .button a.login {
+    width: 70px;
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+/*# sourceMappingURL=digital.css.map */
