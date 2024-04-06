@@ -3,8 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     let username = document.querySelector("#username").value;
     let password = document.querySelector("#password").value;
+    let signupAPIUrl = "";
+    if (
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1"
+    ) {
+      // local development server
+      signupAPIUrl = "http://localhost:3001/login";
+    } else {
+      signupAPIUrl = "https://creative80.onrender.com/signup";
+    }
     try {
-      const response = await fetch("http://localhost:3001/signup", {
+      const response = await fetch(signupAPIUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
