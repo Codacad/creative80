@@ -12,8 +12,8 @@ export const get_signup = async (req, res) => {
 
 export const post_signup = async (req, res) => {
   const user = req.body;
-  const { username, password } = user;
-  if (!username || !password) {
+  const {firstname, lastname, username, password } = user;
+  if (!firstname || !lastname || !username || !password) {
     return res
       .status(401)
       .send({ message: "Please enter the login details..." });
@@ -24,7 +24,7 @@ export const post_signup = async (req, res) => {
     return res.status(401).send({ message: "Username is already exist..." });
   }
 
-  const newUser = await User.create({ username, password });
+  const newUser = await User.create({firstname, lastname, username, password });
   console.log(newUser);
   res
     .status(200)

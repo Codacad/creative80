@@ -11,5 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const user = JSON.parse(getCookie("user"));
- document.querySelector('.user').innerHTML = `Welcom ${user.username}, `
+ document.querySelector('.user').innerHTML = `Welcome ${user.username},`
 });

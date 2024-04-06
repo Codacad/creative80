@@ -4,19 +4,21 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import session from "express-session";
-import dbConnection from "./db.connection.js";
+import { localDbConnection } from "./db.connection.js";
 import MongoDBStore from "connect-mongodb-session";
 import router from "./routes/routes.js";
-configDotenv()
+import { clearScreenDown } from "readline";
+configDotenv();
 const app = express();
 
 // Db connection
-dbConnection();
-const PORT = process.env.PORT || 3001
+// dbConnection();
+localDbConnection();
+const PORT = process.env.PORT || 3001;
 // Session store
 const mongoDbStoreSession = MongoDBStore(session);
 const store = new mongoDbStoreSession({
-  uri: process.env.DB_URI,
+  uri: process.env.LOCAL_DB_URI,
   collection: "sessions",
 });
 
@@ -36,7 +38,7 @@ app.use(
   })
 );
 
-app.use('/', router)
+app.use("/", router);
 
 app.listen(PORT, () => {
   console.log("Server is running on PORT", 3001);

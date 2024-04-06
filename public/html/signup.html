@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-</head>
-<body>
-  <form class="login">
-    <h1>Signup Here</h1>
-    <input type="text" id="username" placeholder="Enter Username..." />
-    <input type="password" id="password" placeholder="Enter Password..." />
-    <button class="submit-signup">Signup</button>
-  </form>
-  <p class="login-here">
-    <span>New User  <a href="/login">Login</a></span>
-  </p>
-  <span class="signup-message"></span>
-  <script src="./js/signup.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/css/signup.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logohead">
+        <h1><a href="/">The Creative96 Room</a></h1>
+      </div>
+      <div class="nav-menus">
+        <div class="logohead">
+          <h1><a href="/">The Creative96 Room</a></h1>
+        </div>
+        <div class="menu-side">
+          <ul>
+            <li><a href="/design">Design</a></li>
+            <li><a href="/film">Film</a></li>
+            <li><a href="/advertising">Advertising</a></li>
+            <li><a href="/photography">Photography</a></li>
+            <li><a href="/digital">Digital</a></li>
+            <li><a href="/podcast">Podcast</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="search-button-side">
+          <div class="search">
+            <input
+              type="text"
+              class="search-input"
+              name="Search"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="button">
+            <a href="/login" class="login">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="signup">
+      <div class="signup-content">
+        <div class="signup-message"></div>
+        <form class="signup-form">
+          <h1>Signup Here</h1>
+          <input type="text" class="firstname" required id="firstname" placeholder="First Name...">
+          <input type="text" class="lastname" required id="lastname" placeholder="Last Name...">
+          <input type="text" id="username" required placeholder="Enter Username..." />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password..."
+            required
+          />
+          <button class="submit-signup">Signup</button>
+        </form>
+        <p class="login-here">
+          <span>Already have an account? <a href="/login">Login</a></span>
+        </p>
+      </div>
+    </section>
+    <script src="./js/signup.js"></script>
+  </body>
 </html>

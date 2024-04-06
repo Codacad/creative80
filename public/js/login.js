@@ -25,15 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }),
       });
       const message = await response.json();
-      document.querySelector(".login-message").innerHTML = `${message.message}`;
+      document.querySelector(
+        ".login-message"
+      ).innerHTML = `<span class="show-message">${message.message}</span>`;
       if (message.login) {
         window.location.href = "dashboard";
       }
     } catch (error) {
       console.log(error.message);
     }
+
+    setTimeout(() => {
+      document
+        .querySelector(".login-message span")
+        .classList.add("hide-message");
+    }, 5000);
   };
 
-  const form = document.querySelector(".login");
-  form.addEventListener("click", login);
+  const form = document.querySelector(".login-form");
+  form.addEventListener("submit", login);
 });
