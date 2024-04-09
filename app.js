@@ -4,21 +4,20 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import session from "express-session";
-import { localDbConnection } from "./db.connection.js";
+import { dbConnection, localDbConnection } from "./db.connection.js";
 import MongoDBStore from "connect-mongodb-session";
 import router from "./routes/routes.js";
-import { clearScreenDown } from "readline";
 configDotenv();
 const app = express();
 
 // Db connection
-// dbConnection();
-localDbConnection();
+dbConnection();
+// localDbConnection();
 const PORT = process.env.PORT || 3001;
 // Session store
 const mongoDbStoreSession = MongoDBStore(session);
 const store = new mongoDbStoreSession({
-  uri: process.env.LOCAL_DB_URI,
+  uri: process.env.DB_URI,
   collection: "sessions",
 });
 

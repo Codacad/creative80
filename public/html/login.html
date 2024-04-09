@@ -41,13 +41,12 @@
             <a href="/login" class="login">Login</a>
           </div>
         </div>
+        <div class="logged-user"></div>
       </div>
     </nav>
     <section class="login">
       <div class="login-content">
-        <div class="login-message">
-          
-        </div>
+        <div class="login-message"></div>
         <form class="login-form">
           <h1>Login Here</h1>
           <input type="text" id="username" placeholder="Enter Username..." />
@@ -59,10 +58,11 @@
           <button class="submit-login">Login</button>
         </form>
         <p class="signup-here">
-          <span>Already have an account? <a href="/signup">Signup</a></span>
+          <span>New to Creative96? <a href="/signup">Signup</a></span>
         </p>
       </div>
     </section>
+    <script type="module" src="../js/helpers/ifUserLoggedIn.js"></script>
     <script src="./js/login.js"></script>
   </body>
 </html>

@@ -48,15 +48,37 @@
         <div class="signup-message"></div>
         <form class="signup-form">
           <h1>Signup Here</h1>
-          <input type="text" class="firstname" required id="firstname" placeholder="First Name...">
-          <input type="text" class="lastname" required id="lastname" placeholder="Last Name...">
-          <input type="text" id="username" required placeholder="Enter Username..." />
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter Password..."
-            required
-          />
+          <div class="input-group">
+            <div class="first-group">
+              <input
+                type="text"
+                class="firstname"
+                required
+                id="firstname"
+                placeholder="First Name..."
+              />
+              <input
+                type="text"
+                class="lastname"
+                required
+                id="lastname"
+                placeholder="Last Name..."
+              />
+            </div>
+            <input
+              type="text"
+              id="username"
+              required
+              placeholder="Enter Username..."
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter Password..."
+              required
+            />
+          </div>
+
           <button class="submit-signup">Signup</button>
         </form>
         <p class="login-here">
@@ -64,6 +86,7 @@
         </p>
       </div>
     </section>
+    <script type="module" src="../js/helpers/ifUserLoggedIn.js"></script>
     <script src="./js/signup.js"></script>
   </body>
 </html>

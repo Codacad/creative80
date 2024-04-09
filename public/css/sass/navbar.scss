@@ -145,4 +145,21 @@ nav {
       padding: 2rem 1rem;
     }
   }
+
+  div.logged-user{
+    div.user{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      a.logout{
+        display: inline-block;
+        padding: 3px 5px;
+        background-color: $text-gray;
+        color: #fff;
+        font-size: 12px;
+        text-decoration: none;
+        border-radius: 3px;
+      }
+    }
+  }
 }

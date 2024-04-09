@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-</head>
-<body>
-  <div class="dashbaord">
-    <h1>My Dashboard</h1>
-    <span>
-      <span class="user"></span>
-      <a href="/logout">Logout</a>
-    </span>
-  </div>
-  <script src="./js/dashbaord.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/css/dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logohead">
+        <h1><a href="/">The Creative96 Room</a></h1>
+      </div>
+      <div class="nav-menus">
+        <div class="logohead">
+          <h1><a href="/">The Creative96 Room</a></h1>
+        </div>
+        <div class="menu-side">
+          <ul>
+            <li><a href="/design">Design</a></li>
+            <li><a href="/film">Film</a></li>
+            <li><a href="/advertising">Advertising</a></li>
+            <li><a href="/photography">Photography</a></li>
+            <li><a href="/digital">Digital</a></li>
+            <li><a href="/podcast">Podcast</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="search-button-side">
+          <div class="search">
+            <input
+              type="text"
+              class="search-input"
+              name="Search"
+              placeholder="Search..."
+            />
+          </div>
+          <div class="button">
+            <a href="/login" class="login">Login</a>
+          </div>
+        </div>
+        <div class="logged-user"></div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <div class="dashbaord">
+      <h1>My Dashboard</h1>
+      <span>
+        <span class="user"></span>
+        <a href="/logout">Logout</a>
+      </span>
+    </div>
+    <script type="module" src="../js/helpers/ifUserLoggedIn.js"></script>
+    <script type="module" src="./js/dashbaord.js"></script>
+  </body>
 </html>

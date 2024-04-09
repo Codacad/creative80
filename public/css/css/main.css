@@ -131,6 +131,20 @@ nav div.nav-menus div.search-button-side .button a.login {
     padding: 2rem 1rem;
   }
 }
+nav div.logged-user div.user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav div.logged-user div.user a.logout {
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: #666e93;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 3px;
+}
 
 body {
   font-family: "Sora", sans-serif;
