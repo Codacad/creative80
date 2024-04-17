@@ -11,13 +11,26 @@ configDotenv();
 const app = express();
 
 // Db connection
-dbConnection();
-// localDbConnection();
+// dbConnection();
+
+let db_uri;
+const host = async (req, res, next) => {
+  if(req.hostname === "localhost"){
+    console.log("You are on the local machine")
+    localDbConnection();
+    db_uri = process.env.LOCAL_DB_URI
+  } else {
+    console.log("You are on the remote machine")
+    dbConnection()
+    db_uri = process.env.DB_URI
+  }
+  next()
+}
 const PORT = process.env.PORT || 3001;
 // Session store
 const mongoDbStoreSession = MongoDBStore(session);
 const store = new mongoDbStoreSession({
-  uri: process.env.DB_URI,
+  uri: process.env.LOCAL_DB_URI,
   collection: "sessions",
 });
 
@@ -37,7 +50,7 @@ app.use(
   })
 );
 
-app.use("/", router);
+app.use("/", host, router);
 
 app.listen(PORT, () => {
   console.log("Server is running on PORT", 3001);

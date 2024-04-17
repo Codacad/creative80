@@ -86,7 +86,7 @@ nav {
           outline: none;
           z-index: 0;
           &:focus {
-            box-shadow: 0px 0px 1px 2px $secondary;
+            box-shadow: 0px 0px 0px 2px $primary;
           }
           &::placeholder {
             opacity: 0.6;
@@ -117,7 +117,7 @@ nav {
         a.login {
           padding: 10px;
           display: block;
-          background-color: #e44b43;
+          background-color: $primary;
           width: 100px;
           color: white;
           text-align: center;

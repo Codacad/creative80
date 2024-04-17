@@ -56,7 +56,7 @@ main {
           width: 350px;
           height: 200px;
           object-fit: contain;
-          margin-top: auto;
+          // margin-top: auto;
         }
         @media (max-width: 950px) {
           img.dotted-pattern {
@@ -331,21 +331,21 @@ main {
     align-items: center;
     margin-top: 50px;
     margin: 20px;
-    h2{
+    h2 {
       font-size: 28px;
     }
-    @media (max-width:550px){
-        h2{
-          font-size: 20px;
-        }
-    } 
+    @media (max-width: 550px) {
+      h2 {
+        font-size: 20px;
+      }
+    }
     div.podcasts {
       display: grid;
       width: 80%;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       // justify-content: center;
       // align-items: center;
-      
+
       margin-bottom: 64px;
       gap: 20px;
       div.podcast {
@@ -418,10 +418,14 @@ main {
   }
 
   @media (max-width: 950px) {
-    ection.creative-dev-podcasts {
+    section.creative-dev-podcasts {
       display: flex;
       flex-direction: column;
       gap: 50px;
     }
+    
   }
 }
+
+// footer
+@import "footer.scss";
