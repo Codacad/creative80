@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 3001;
 // Session store
 const mongoDbStoreSession = MongoDBStore(session);
 const store = new mongoDbStoreSession({
-  uri: process.env.LOCAL_DB_URI,
+  uri: db_uri,
   collection: "sessions",
 });
 
